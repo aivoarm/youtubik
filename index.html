@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nice youtube search</title>
+<meta name="description" content="youtubik.com is a website where you can search the top veiwed youtube videos">
+<meta name="keywords" content="youtube,  video, find video, best , best video">
+    <meta name="author" content="Arman Aiva  mailto:aayvazy@gmail.com">
+      <meta name="copyright" content="Copyright 2013 Arman Aiva">
+    <meta name="google-site-verification" content="ivRWwx3e4y2wEes_g8oTPGV-xomFPAZB5aNHjyR75X8" />
+ 
+<link href='http://fonts.googleapis.com/css?family=Give+You+Glory' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.css" />
+
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+
+
+
+    <script src="bootstrap/js/bootstrap.js"></script>
+    
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+
+    <script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+
+
+  <script src="js/jquery.mousewheel.min.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43088790-1', 'youtubik.com');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body>
+
+
+
+   
+
+<header> <!-- Defining the header section of the page with the appropriate tag -->
+   <div id="company"> <h1>Find the best youtube videos</h1></div>
+</header>
+
+
+
+<div id="container">
+
+
+  
+	 <div id="search_cover" >
+		<div id="search" >
+		  <input id="srch"   type="text"  placeholder="best for kids">
+		  
+		  <img id="loader"  alt="Loading..." src="img/loading.gif">
+		</div>
+	</div>
+  
+  
+  <div id="content_main">
+  
+      <div id='scroll' >
+	 <!-- "previous page" action 
+	    <a class="prev browse left"></a>
+	  -->
+	    <!-- root element for scrollable -->
+	    <div class="scrollable" id="scrollable">
+	  
+		     <!-- root element for the items -->
+		     <div class="items"> </div>
+	 
+
+	    </div>
+	  
+	 <!-- "next page" action 
+	 <a class="next browse right"></a>
+	 -->
+	 
+	  
+	 <div class="clear">
+	    <a class="prev browse left"></a>
+	   <a class="next browse right"></a>
+	 </div>
+      </div>
+
+
+	 <div id="videos" > <!-- Placeholder for video -->
+	   
+	 </div>
+
+
+
+
+   <div class="clear"></div> 
+</div>
+
+
+
+
+<!-- javascript coding -->
+<script>
+    
+     
+	$('.scrollable').mousewheel(function(e, delta) {
+		this.scrollLeft -= (delta * 30);
+		e.preventDefault();
+	});
+	
+	
+	$(function() {
+
+  // initialize scrollable
+  $(".scrollable").scrollable();
+  
+    // 
+});
+
+       
+
+</script>
+
+
+    <script type="text/javascript" src="js/youtube.js"></script>
+
+    
+<a href="#" id= "button" >Menu</a>
+
+  <div class="menu">
+
+      
+          <ul>
+              <li><a href="#">More</a></li>
+
+              <li><a href="#">to</a></li>
+	      <li><a href="#">come,</a></li>
+	      <li><a href="#"></a>PLease</li>
+	      <li><a href="#">be</a></li>
+	      <li><a href="#">paitant</a></li>
+	      
+          </ul>
+      </div>
+ </div>
+	
+	<script>
+	 
+	 $( "#button" ).hover(function() {
+	   // 
+    
+
+      $( ".menu" ).toggle('slow');
+   
+	
+	 
+});
+ 
+  </script>
+	
+</div>	
+    <footer class="clear" >
+     
+
+
+<a href="https://plus.google.com/101688463845078568963/?rel=author"
+           rel="publisher">Find us on Google+</a>
+
+<p class="clear"> Copyright &copy; 2013 <a href="http://youtubik.com">youtubik.com</a>. All rights reserved by Arman Aiva, email: aayvazy@gmail.com </p>
+
+
+ </footer>
+</section>
+</body>
+</html>

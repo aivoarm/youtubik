@@ -1,0 +1,286 @@
+body{
+	margin:10px;
+	width:960px;
+	font-family: 'Give You Glory', cursive;
+		
+}
+ hr{
+	margin: 0;	
+ }
+
+header{
+	margin:0;
+	pading:0;
+	width:700px;
+	margin:0 auto;
+	text-align: center;
+	margin-bottom: 20px;
+	color:#848FA9;
+	font-size: 1.5em;
+	text-shadow: 10px 10px  10px #848FA9;
+}
+
+
+
+
+
+
+
+#content_main{
+float: right;
+width: 90%;
+margin:  0;
+min-height: 800px;
+
+}
+
+
+#search_cover{
+margin: 0 auto;
+position: relative;
+width: 400px;
+test-align:centre;
+}
+
+
+#srch{
+width: 342px;
+height: 40px;
+margin: 0 20px 0 20px;
+box-shadow: 10px 10px  10px #888888;
+color:blue;
+border: 1 solid #aaa;
+transform:perspective(600) rotateX(15deg);
+-webkit-transform:perspective(600) rotateX(15deg);
+-moz-transform:perspective(600) rotateX(15deg);
+-ms-transform:perspective(600) rotateX(15deg);
+	
+}
+
+#loader{
+width: 70px;
+height: 50px;
+padding: 0px;
+position: absolute;
+right: 12px;
+top: 1px;
+ transform:perspective(600) rotateX(20deg);
+-webkit-transform:perspective(600) rotateX(20deg);
+-moz-transform:perspective(600) rotateX(20deg);
+-ms-transform:perspective(600) rotateX(20deg);	
+}
+
+.clear{
+	clear: both;
+}
+.items{
+	padding:20px 0;
+}
+
+.items img{
+	
+border-radius: 10px;
+
+box-shadow: 10px 10px  10px #888888;	
+}	
+
+.items div{
+	padding: 10px;
+	
+}
+
+.XXXitems div {
+	
+	
+
+/* W3C */
+transform: rotate(20deg); 
+transform-origin: 80% 80% 0; 
+
+/* Safari & Chrome */
+-webkit-transform: rotate(5deg); 
+-webkit-transform-origin: 80% 80% 0; 
+
+/* Firefox */
+-moz-transform: rotate(20deg); 
+-moz-transform-origin: 80% 80% 0; 
+
+/* Internet Explorer */
+-ms-transform: rotate(20deg); 
+-ms-transform-origin: 80% 80% 0; 
+
+/* Opera */
+-o-transform: rotate(20deg); 
+-o-transform-origin: 80% 80% 0; 
+	
+}
+
+
+#videos{
+
+     display: none;
+     position:absolute;
+     top: 240px;
+     left: 210px;
+      width: 650px;
+      height: 430px;
+      z-index: 100;
+      background: #ccc;
+      border: 2px solid #fff;
+      margin: 20px auto;
+      border: 1px solid #fff;
+     border-radius: 10px;
+  box-shadow: 10px 10px  10px #888888;
+
+}
+
+#videos #player {
+	padding:5px;
+	border-radius: 10px;
+  box-shadow: 10px 10px  10px #888888;
+}
+/*
+root element for the scrollable.  when scrolling occurs this
+element stays still.
+*/
+.scrollable {
+  /* required settings */
+
+  position:relative;
+  margin:0 20px 0 10px;
+  overflow:hidden;
+  width: 96%;
+  height:380px;
+  
+}
+ .player2{
+	width: 180px;
+ }
+ 
+ #discr{
+	margin: 10px auto;
+	width: 180px;
+	overflow-y: scroll;
+ }
+ 
+#scroll{
+padding:20px 20px;
+
+margin:10px auto;
+width: 90%;
+border: 2px solid #D9DCD3;
+  
+  background: #fff;
+  
+  border-radius: 10px;
+  box-shadow: 10px 10px  10px #888888;
+  
+  transform:perspective(600) rotateX(10deg);
+-webkit-transform:perspective(600) rotateX(10deg);
+-moz-transform:perspective(600) rotateX(10deg);
+-ms-transform:perspective(600) rotateX(10deg);
+  
+}
+/*
+root element for scrollable items. Must be absolutely positioned
+and it should have a extremely large width to accommodate scrollable
+items.  it's enough that you set width and height for the root element
+and not for this element.
+*/
+.scrollable .items {
+  /* this cannot be too large */
+    
+  width:20000em;
+  position:absolute;
+  
+}
+ 
+/*
+a single item. must be floated in horizontal scrolling.  typically,
+this element is the one that *you* will style the most.
+*/
+.items div {
+  float:left;
+  margin: 0px;
+}
+
+.items div img{
+  width:180px;
+}
+
+/* this makes it possible to add next button beside scrollable */
+.scrollable {
+    float:left;
+}
+
+/* prev, next, prevPage and nextPage buttons */
+#scroll  a.browse {
+	
+    background:url(http://jquerytools.org/media/img/scrollable/arrow/hori_large.png) no-repeat;
+    display:block;
+    width:30px;
+    height:30px;
+    float:left;
+    margin:-20px 0px;
+    cursor:pointer;
+    font-size:1px;
+    padding-top: 0px;
+}
+
+.items div:hover{
+	margin: 3px;
+}
+/* right */
+#scroll a.right { background-position: 0 -30px; clear:right;
+margin-bottom: 0px;
+margin-right: 0px;
+float:right;
+
+}
+
+#scroll a.right:hover { background-position:-30px -30px; }
+#scroll  a.right:active { background-position:-60px -30px; }
+
+
+/* left */
+#scroll  a.left { margin-left: 20px;background-position: 0px 0 30px 30px;
+margin-bottom: 0px;
+margin-right: 0px;
+float:left;
+}
+#scroll  a.left:hover  { background-position:-30px 0; }
+#scroll  a.left:active { background-position:-60px 0; }
+
+
+
+/* disabled navigational button */
+a.disabled {
+    //visibility:hidden !important;
+}
+
+
+/*
+ *
+ *MENU
+ */
+
+.menu{
+	background: #fff;
+//position: absolute;
+margin-left: 10px;
+float: left;
+width: 50px;
+border:1px solid black;
+padding:5px;
+border-radius: 10px;
+display: none;
+}
+
+
+
+.menu ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
