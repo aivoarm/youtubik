@@ -10,7 +10,7 @@
 
           List = Backbone.Collection.extend({
             model: Item,
-            url:"http://gdata.youtube.com/feeds/api/videos?v=2&alt=jsonc&orderby=viewCount&max-results=50&q=best%20for%20kids",
+            url:url,
             parse: function(response) {//console.log(response.data.items); 
             return response.data.items;}
             

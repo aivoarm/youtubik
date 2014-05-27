@@ -48,6 +48,7 @@ app.configure('production', function(){
 
 
 require('./routes/index')(app);
+require('./routes/test')(app);
 
 
 
