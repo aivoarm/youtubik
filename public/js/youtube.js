@@ -6,36 +6,56 @@
         function init() {
         var url =  callme("best for kids");
         
-         var Item = Backbone.Model.extend();
+          Item = Backbone.Model.extend();
 
-         var List = Backbone.Collection.extend({
+          List = Backbone.Collection.extend({
             model: Item,
-            url:url,
-            parse: function(response) {//console.log(response); 
-            return response;}
+            url:"http://gdata.youtube.com/feeds/api/videos?v=2&alt=jsonc&orderby=viewCount&max-results=50&q=best%20for%20kids",
+            parse: function(response) {//console.log(response.data.items); 
+            return response.data.items;}
+            
           });    
         
-          var ListView = Backbone.View.extend({    
+           ListView = Backbone.View.extend({    
             el: $('#bot'),
-            events: {
+            
+             events: {
               'click button#add': 'getPost'
             },
             initialize: function(){
-              _.bindAll(this, 'render', 'getPost');
+              _.bindAll(this, 'render');
               this.collection = new List();
+              this.template = _.template($('#data-template').html())
+           
               this.render(); 
             },
             render: function(){
               var self = this;      
-              $(this.el).append("<button id='add'>get</button>");
-            },
-            getPost: function(){
+              
+             this.collection.fetch({
+                  success: function(data){
+                    //  console.log(data.models[0]);
+                  //$(self.el).append(data.models[0])
                 
-              var data = this.collection.fetch();
-                console.log(data)
-                
-                $('#container').append(JSON.stringify(data))
-            
+                     for(var i=0; i< self.collection.models.length; i++){
+                         
+                         self.collection.models[i].each(function(k,v){
+                         
+                          self.$el.append(self.template({data: v}));
+                         })
+                     };
+                    
+                    
+                   
+                     return self;
+                    
+                     }, error: "non"
+                  })
+              
+               
+               
+                  
+               //var data =this.collection.bind('reset', this.render, this);
              
             }
         
@@ -44,7 +64,7 @@
   // **listView instance**: Instantiate main app view.
          var listView = new ListView();
         
-        
+       
      
         
        $.getJSON(url, function(data){
@@ -77,3 +97,33 @@
 	
 
     }   //end 
+    
+    
+    /*
+    
+      var ListView = Backbone.View.extend({    
+            el: $('#bot'),
+            events: {
+              'click button#add': 'getPost'
+            },
+            initialize: function(){
+              _.bindAll(this, 'render', 'getPost');
+              this.collection = new List();
+              this.render(); 
+            },
+            render: function(){
+              var self = this;      
+              $(this.el).append("<button id='add'>get</button>");
+            },
+            getPost: function(){
+                
+              var data=this.collection.fetch()
+              console.log(data.attributes)
+                  
+               //var data =this.collection.bind('reset', this.render, this);
+                
+                $('#container').append(JSON.stringify(data))
+            
+             
+            }
+            */
