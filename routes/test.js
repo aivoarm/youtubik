@@ -1,42 +1,33 @@
 
 
-
-
-
 module.exports = function(app) {
-    
-  
-    
-    app.get('/test', function(req, res){  
-        
-       
-        
-     var youtube = require('youtube-feeds')
+     
+    app.get('/test.json', function(req, res){  
+     
+      var youtube = require('youtube-feeds')
         
         youtube.httpProtocol = 'https'
     
        youtube.feeds.videos(
     {
        
-        q:   "home"
-        ,
-        'max-results':    1,
+        q: req.query.q || "cute baby" ,
+        'max-results':    req.query.max || 5,
         orderby:        'published'
     }, callback)
        
       
-     
-        
-       
-        function callback( err, data ) {
+    function callback( err, data ) {
     if( err instanceof Error ) {
         console.log( err )
     } else {
-         res.send({ data: data});
+          res.json(data.items);  
+         res.render('test', 
+                    {title : "Title", data: data.items} );
     }
 }
 
-    
+   
 
      
   

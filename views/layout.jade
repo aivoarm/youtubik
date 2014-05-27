@@ -1,98 +1,24 @@
 !!!
 html
   head
-    meta(http-equiv="Content-Type" content="text/html;charset=utf-8")
-    meta(name="description" content="Free interactive course for children to learn web development with exercises and quizzes.\
-    Ongoing project starting 01-Aug-2013.This website can be linked to learning tutorials as additional tool for learning HTML,\
-    CSS and Javascript.")
-    meta(name="author" content="Arman Aiva  mailto:aayvazy@gmail.com")
-    meta(name="keywords" content="kids learning websites, learning websites for kids,\
-        online educational games, educational games online, chidren learning games,HTML, CSS,\
-         kids educational websites, kids learning, learning activities for kids, school games for kids,\
-         educational software for kids, education games for kids, educational websites, educational games,\
-         kindergarten learning games, games for children free quiz to learn website, free kids learn web building,programming for\
-         kids, learn programming, learn playing,\
-        web building exercises for children, web writing course for kids,\
-        HTML for children, how to build  website, kids learn website,\
-        kids learn web building,  kids learn web development, how to creat a website ,\
-        how to creat a website for kids, kids website, learn, kids, web, website, web design,\
-        free interactive course for kids, free exercises web buiding,free exercises to learn HTML")
-    meta(name="copyright" content="Copyright 2013 Arman Aiva")
-    meta(name="google-site-verification" content="DgsAhLPcb-9xny_xaIzzmn1BkHVWuTaOGOWVwOFu2Fk")
-  
-  
-  
-    title Free online learning, kids build websites
+   
     
-    link(rel='shortcut icon' href='/images/favicon.ico' type='image/x-icon')
     link(rel="stylesheet" type="text/css" href="/stylesheet/jquery.ui.all.css")
-    link(rel="stylesheet" type="text/css" href="/stylesheet/style.css")
-    link(rel="stylesheet" type="text/css" href="/stylesheet/sample.css")
-    link(rel="stylesheet" type="text/css" href="/stylesheet/bootstrap.css")
-    link(href="/stylesheet/gfont.css" rel="stylesheet" type="text/css")
-    
-    script(type='text/javascript').
-      (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,"script","//www.google-analytics.com/analytics.js","ga");
-      ga("create", "UA-43106422-1", "koogl.com");
-      ga("send", "pageview");
-    script(type="text/javascript" src="/js/backbone.js")
-    script(type="text/javascript" src="/js/bootstrap.js")
-    script(type="text/javascript" src="/js/jquery.js")
-    script(type="text/javascript" src="./ckeditor/adapters/jquery.js")
-    script(type="text/javascript" src="./ckeditor/ckeditor.js")
-    script(type="text/javascript" src="./js/index.js")  
-    script(type="text/javascript" src="/js/socket.io-stream.js")
-    script(type="text/javascript" src="/socket.io/socket.io.js")
 
+    link(rel="stylesheet" type="text/css" href="/stylesheet/bootstrap.css")
+  
+    
+    
+    script(type="text/javascript" src="/js/jquery-min.js")
+    script(type="text/javascript" src="/js/bootstrap-min.js")
+   
+    script(type="text/javascript" src="/js/underscore-min.js")
+    script(type="text/javascript" src="/js/backbone-min.js")
   body
   
 
     
-    header.wideBox
-     h1 Learning hang out
-    
-     
            
     #content
-      div(style="margin-bottom:10px")
-       a.menulink(href="/") Home
-       a.menulink(href="/game") Game to learn HTML
-       a.menulink(href="/socket") Chat
-       a.menulink(href="/stream") Upload
-       a.menulink(href="/video_recorder") Video Recorder
-      block content
-      //!= partial('session/user')
-        
-        
-        
-      div(style="clear: both;width:960px")
-      script(type='text/javascript').
-        (function() {
-            var cx = "010758940488641653985:WMX-1082278946";
-            var gcse = document.createElement("script"); gcse.type = "text/javascript"; gcse.async = true;
-            gcse.src = (document.location.protocol == "https:" ? "https:" : "http:") +
-                    "//www.google.com/cse/cse.js?cx=" + cx;
-            var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(gcse, s);
-        })();
-       gcse:search
-    
-    div#banner
-    
-    footer.wideBox
-     style.
-      #links a:link,a:visited{text-decoration: underline; color: rgb(59, 173, 91);margin-left: 10px;}
-      #links a:hover{color: #000088;}
-     
-     #links
-      a(href="http://stayathomemoms.about.com/od/activitiesandfun/a/how-to-create-a-website.htm") About.com
-      a(href="https://plus.google.com/101688463845078568963/?rel=author" rel="publisher") Find us on Google+
-     p ©2013. All rights reserved by
-      span(itemprop="author" itemscope itemtype="http://schema.org/Person")
-       span(itemprop="name") Arman Aiva
-    meta(itemprop="url" content="http://www.koogl.com")
-     span(itemprop="publisher" itemscope itemtype="http://schema.org/Organization")
-        
+      
         

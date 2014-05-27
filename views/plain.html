@@ -23,21 +23,35 @@
 <!-- javascript coding -->
 <script type="text/template" id="data-template">
     
-   
-      
-     
-        <p><%= JSON.stringify(data)%></p>
-        <br />
-        <p><%= JSON.stringify(data.title)%></p>
-        <br />
+           
+         <%_.each(data,function(item){ %>  
+        <iframe style ="display:none" width="210" height="172"
+                src=<%= JSON.stringify(item)%>>
+        </iframe>
+        <%})  %>
         
-        <p><%= JSON.stringify(data.id)%></p>
-        <hr>
+        <%_.each(thumb,function(item){ %>  
+        <a href="#"> <img width="105  " height="86"
+                src=<%= JSON.stringify(item)%>>
+        </a>
+        <%})  %>
         
         
 
 </script>
 
+        <script type="text/template" id="video-template">
+    
+           
+         <%_.each(data,function(item){ %>  
+        <iframe style ="display:none" width="210" height="172"
+                src=<%= JSON.stringify(item)%>>
+        </iframe>
+        <%})  %>
+        
+       </script>
+        
+        
 <div id="container"></div>
 
     <script type="text/javascript" src="js/youtube.js"></script>

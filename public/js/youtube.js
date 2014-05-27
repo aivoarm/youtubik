@@ -4,15 +4,15 @@
         $(init);
         
         function init() {
-        var url =  callme("best for kids");
+        var url =  "http://iceapp-113377.usw1-2.nitrousbox.com/test.json?q=baby&max=50"; //callme("best for kids");
         
           Item = Backbone.Model.extend();
 
           List = Backbone.Collection.extend({
             model: Item,
             url:url,
-            parse: function(response) {//console.log(response.data.items); 
-            return response.data.items;}
+           // parse: function(response) {//console.log(response.data.items); 
+           // return response;}
             
           });    
         
@@ -26,7 +26,6 @@
               _.bindAll(this, 'render');
               this.collection = new List();
               this.template = _.template($('#data-template').html())
-           
               this.render(); 
             },
             render: function(){
@@ -34,29 +33,18 @@
               
              this.collection.fetch({
                   success: function(data){
-                    //  console.log(data.models[0]);
-                  //$(self.el).append(data.models[0])
-                
-                     for(var i=0; i< self.collection.models.length; i++){
-                         
-                       
-                         
-                          self.$el.append(self.template({data: self.collection.models[i]}));
-                        
-                     };
-                    
-                    
-                   
-                     return self;
-                    
+                          var cont=[]
+                          var thumb=[]
+                          self.collection.each(function(k){
+                                cont.push(k.attributes.content[5]);
+                                thumb.push(k.attributes.thumbnail.hqDefault);
+                           });
+                          console.log(cont)
+                          self.$el.append(self.template({ data: cont, thumb:thumb}));
+                          
                      }, error: "non"
                   })
               
-               
-               
-                  
-               //var data =this.collection.bind('reset', this.render, this);
-             
             }
         
           });
@@ -67,10 +55,10 @@
        
      
         
-       $.getJSON(url, function(data){
+       //$.getJSON(url, function(data){
            
         //#  $("#container").html(JSON.stringify(data))
-       })
+       //})
         
        
         }
