@@ -39,10 +39,10 @@
                 
                      for(var i=0; i< self.collection.models.length; i++){
                          
-                         self.collection.models[i].each(function(k,v){
+                       
                          
-                          self.$el.append(self.template({data: v}));
-                         })
+                          self.$el.append(self.template({data: self.collection.models[i]}));
+                        
                      };
                     
                     
